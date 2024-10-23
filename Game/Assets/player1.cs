@@ -6,17 +6,47 @@ public class player1 : MonoBehaviour
 {
 
     Rigidbody2D rb;
+    public float movementspeed;
+    public float height;
+    private KeyCode lastHitKey;
 
-    float moveforce = 2;
+   
     // Start is called before the first frame update
     void Start()
     {
-        rb= GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(transform.right * moveforce * Input.GetAxis("Horizontal"), ForceMode2D.Force);
+        if(Input.GetKeyDown (KeyCode.Space))
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, height);
+        }
+
+        if(Input.GetKeyDown (KeyCode.LeftArrow))
+        {
+            if(lastHitKey == KeyCode.LeftArrow) {
+
+        }else
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2 ((movementspeed - movementspeed * 2), 0);
+                lastHitKey = KeyCode.LeftArrow;
+            }
     }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (lastHitKey == KeyCode.RightArrow)
+            {
+
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2((movementspeed - movementspeed * 2), 0);
+                lastHitKey = KeyCode.RightArrow;
+            }
+        }
+    }
+
 }
