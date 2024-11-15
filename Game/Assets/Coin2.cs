@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class coin2 : MonoBehaviour
+public class Coin2 : MonoBehaviour
 {
     // Start is called before the first frame update
     public static int totalCoins = 0;
 
-    void Awoke()
+    void Awake()
     {
         GetComponent<Collider2D>().isTrigger = true;
     }
@@ -21,13 +21,6 @@ public class coin2 : MonoBehaviour
             totalCoins++;
             Destroy(gameObject);
         }
-
-
-        if (totalCoins == 4)
-        {
-            SceneManager.LoadScene("level 2");
-        }
-
 
 
 

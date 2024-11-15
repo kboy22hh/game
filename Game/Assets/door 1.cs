@@ -5,16 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class door1 : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Awake()
     {
-        if (collision.gameObject.name == "player 1")
-        {
-            Invoke("CompleteLevel", 2f);
-        }
+        GetComponent<Collider2D>().isTrigger = true;
     }
 
-    private void CompleteLevel()
+    private void OnTriggerEnter2D(Collider2D c2d)
     {
-        SceneManager.LoadScene("level 2");
+        if (c2d.CompareTag("Player2"))
+        {
+            Destroy(gameObject);
+        }
+        
     }
+
+ 
 }

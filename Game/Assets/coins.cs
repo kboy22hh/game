@@ -23,7 +23,7 @@ public class coins : MonoBehaviour
         }
 
 
-        if (totalCoins == 4)
+        if (totalCoins == 3)
         {
             SceneManager.LoadScene("level 2");
         }
