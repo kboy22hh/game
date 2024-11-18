@@ -10,7 +10,7 @@ public class coins : MonoBehaviour
 
     void Awake()
     {
-        GetComponent<Collider2D>().isTrigger = true;   
+        GetComponent<Collider2D>().isTrigger = true;
     }
 
     // Update is called once per frame

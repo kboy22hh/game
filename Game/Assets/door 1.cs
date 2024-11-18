@@ -18,7 +18,6 @@ public class door1 : MonoBehaviour
         if (c2d.CompareTag("Player2"))
         {
             Destroy(gameObject);
-            GetComponent<Collider2D>().isTrigger = true;
         }
         if (c2d.CompareTag("Player"))
         {
