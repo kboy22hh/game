@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Audio;
-
+//code is from this youtube video(https://youtu.be/dS9my809VJk?si=UCWUTdbFNRBll0Wn)
 public class AudioManager : MonoBehaviour {
 
 	public static AudioManager instance;
