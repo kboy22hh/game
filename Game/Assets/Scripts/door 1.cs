@@ -18,11 +18,12 @@ public class door1 : MonoBehaviour
         if (c2d.CompareTag("Player2"))
         {
             Destroy(gameObject);
+            AudioManager.instance.Play("Red");
         }
         if (c2d.CompareTag("Player"))
         {
             c2d.transform.position = originalPos;
-
+            AudioManager.instance.Play("Blue");
 
         }
  

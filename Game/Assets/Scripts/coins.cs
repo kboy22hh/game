@@ -34,6 +34,10 @@ public class coins : MonoBehaviour
             SceneManager.LoadScene("level 3");
         }
 
+        if (totalCoins == 11)
+        {
+            SceneManager.LoadScene("Winning");
+        }
 
 
 
